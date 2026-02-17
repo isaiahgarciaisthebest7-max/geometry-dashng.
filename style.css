@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-container {
+    position: relative;
+}
+
+#game-canvas {
+    background: linear-gradient(#0a0015, #1a0033);
+    border: 3px solid #444;
+    box-shadow: 0 0 30px #6600cc;
+    image-rendering: crisp-edges;
+}
+
+#ui {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px #000, 0 0 8px #aa00ff;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#game-over, #pause-menu, #level-complete {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 0 0 20px #ff0066;
+    pointer-events: none;
+    display: none;
+    z-index: 20;
+}
+
+#pause-menu { color: #00ffff; text-shadow: 0 0 20px #00ffff; }
+#level-complete { color: #00ff88; text-shadow: 0 0 20px #00ff88; }
+
+#editor-panel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.75);
+    border: 1px solid #666;
+    padding: 12px;
+    font-size: 14px;
+    display: none;
+    z-index: 15;
+    pointer-events: all;
+}
+
+#editor-panel button {
+    margin: 4px 2px;
+    padding: 6px 10px;
+    background: #222;
+    color: #0f0;
+    border: 1px solid #0f0;
+    cursor: pointer;
+}
+
+#editor-panel button:hover {
+    background: #0f03;
+}
